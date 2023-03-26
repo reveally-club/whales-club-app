@@ -50,7 +50,7 @@ const Header: React.FC = () => {
           <ul className="flex flex-col items-center p-1 py-3 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
             <li>
               <Link
-                href="/submit"
+                href="/dapp"
                 className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 hover:font-bold"
                 aria-current="page"
               >
