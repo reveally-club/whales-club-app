@@ -12,7 +12,7 @@ interface Props {
   tagList: string[];
 }
 
-const DappCard: NextPage<Props> = ({
+const ChainCard: NextPage<Props> = ({
   id,
   imgUrl,
   name,
@@ -25,7 +25,7 @@ const DappCard: NextPage<Props> = ({
 
   return (
     <Link
-      href={`/dapp/${id}`}
+      href={`/chain/${id}`}
       className="max-w-sm rounded overflow-hidden shadow-md hover:shadow-lg hover:cursor-pointer"
     >
       <img
@@ -54,4 +54,4 @@ const DappCard: NextPage<Props> = ({
   );
 };
 
-export default DappCard;
+export default ChainCard;
