@@ -50,11 +50,38 @@ const Header: React.FC = () => {
           <ul className="flex flex-col items-center p-1 py-3 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
             <li>
               <Link
-                href="/chain"
+                href="/wallet"
                 className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 hover:font-bold"
                 aria-current="page"
               >
-                Chain
+                Wallet
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/coin"
+                className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 hover:font-bold"
+                aria-current="page"
+              >
+                Coin
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/nft"
+                className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 hover:font-bold"
+                aria-current="page"
+              >
+                Nft
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contract"
+                className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 hover:font-bold"
+                aria-current="page"
+              >
+                Contract
               </Link>
             </li>
             {/* <li>로그인 관련</li> */}

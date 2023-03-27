@@ -4,7 +4,7 @@ import { fireStore } from "@/modules/firebase";
 import { doc } from "firebase/firestore";
 import Layout from "@/pages/common/Layout";
 
-type DappDetailType = {
+type CoinDetailType = {
   id: string;
   imgUrl: string;
   name: string;
@@ -23,7 +23,7 @@ type DappDetailType = {
   tagList: string[];
 };
 
-export default function DappDetail() {
+export default function CoinDetail() {
   const router = useRouter();
   const { id } = router.query;
 
@@ -31,7 +31,7 @@ export default function DappDetail() {
     doc(fireStore, "chain", `${id}`)
   );
 
-  const value = snapshot?.exists && (snapshot.data() as DappDetailType);
+  const value = snapshot?.exists && (snapshot.data() as CoinDetailType);
 
   return (
     <Layout>
@@ -48,12 +48,6 @@ export default function DappDetail() {
               <h2 className="text-lg">{value?.name}</h2>
             </div>
             <h3 className="mt-2 text-sm text-gray-700">{value?.description}</h3>
-            <div className="mt-4">
-              <p className="mt-2 text-sm font-bold text-gray-700">chainId</p>
-              <span className="mt-2 text-sm text-gray-700">
-                {value?.chainInfo.mainnetId}
-              </span>
-            </div>
             {/* <button className="mt-4 w-full flex justify-center rounded-lg py-3 font-semibold text-gray-800  bg-gradient-to-r from-sky-50 to-violet-50 hover:from-sky-100 hover:to-violet-100">
               Add to Metamask
             </button> */}

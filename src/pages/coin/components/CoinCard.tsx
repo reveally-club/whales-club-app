@@ -12,7 +12,7 @@ interface Props {
   tagList: string[];
 }
 
-const ChainCard: NextPage<Props> = ({
+const CoinCard: NextPage<Props> = ({
   id,
   imgUrl,
   name,
@@ -25,7 +25,7 @@ const ChainCard: NextPage<Props> = ({
 
   return (
     <Link
-      href={`/chain/${id}`}
+      href={`coin/${id}`}
       className="max-w-sm rounded overflow-hidden shadow-md hover:shadow-lg hover:cursor-pointer"
     >
       <img
@@ -54,4 +54,4 @@ const ChainCard: NextPage<Props> = ({
   );
 };
 
-export default ChainCard;
+export default CoinCard;
